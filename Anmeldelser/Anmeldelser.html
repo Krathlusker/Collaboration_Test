@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldings formular</title>  
+
+</head>
+
+<body>
+
+  <div class="review-container">
+        <h1>Product Review</h1>
+        <form id="reviewForm">
+            <div class="rating">
+                <label>
+                    <input type="radio" name="rating" value="5">
+                    ★★★★★
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4">
+                    ★★★★☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3">
+                    ★★★☆☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2">
+                    ★★☆☆☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="1">
+                    ★☆☆☆☆
+                </label>
+            </div>
+            <input name="name" type="text" id="name" required />
+            <textarea id="comment" placeholder="Write your review here..." required></textarea>
+            <button id="Submit">Submit Review</button>
+        </form>
+
+        <div id="reviewsList">
+            <h2>Customer Reviews</h2>
+            <div id="reviews"></div>
+        </div>
+    
+
+        <script src="Anmeldelser.js"></script>
+</body>
+</html>
