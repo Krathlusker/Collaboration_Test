@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* This is a CSS file */
+
+
+.CheckoutStayInBottom {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 1%;
+}
+
+.CheckoutStayInBottom * {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+#OrderGap {
+    gap: 10%;
+}
+
+.MomsStyling {
+    display: flex;
+    flex-direction: row;
+}
+
+.PriceStyling h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.ManglerClassNavn {
+    border-top: 1px solid rgb(224, 224, 224);
+    bottom: 1%;
+}
