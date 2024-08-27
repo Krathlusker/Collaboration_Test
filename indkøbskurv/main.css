@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    height: 54px;
+}
+
+nav {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.NavStyling {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.LogoMenu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.LogoMenu img {
+    height: 100%;
+    width: 40px;
+}
+
+.TopBarButtons {
+    display: flex;
+}
