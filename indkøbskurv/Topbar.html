@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forside</title>
   <meta name="description" content="Front page">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="indkøbskurv.css">
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <script src="./products.js" defer></script>
+  <script src="./quantity.js" defer></script>
 </head>
 <body>
   <!-- skal være 54px på mobile og 75px på desktop -->
@@ -26,5 +27,13 @@
       </div>
     </nav>
   </header>
+  <section>
+    <form class="productForm" id="product-1" action="javascript:;" onsubmit="addToCart()">
+      <button id="itemValueSubtract" type="button" aria-label="subtract">-</button>
+      <input id="itemValue" type="number" min="0" value="1">
+      <button id="itemValueAdd" type="button" aria-label="add">+</button>
+      <button type="submit" id="buy">Føj Til Turv</button>
+    </form>
+  </section>
 </body>
 </html> 

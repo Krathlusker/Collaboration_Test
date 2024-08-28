@@ -13,14 +13,14 @@ const products = [
     },
     {
         id: 1,
-        titel: "McLaren P1™",
-        price: 3499.95,
-        stock: 3,
+        titel: "Ekstra Hjul™",
+        price: 299.95,
+        stock: 99999,
         info: "",
         /* If you want offer the product as NEW */
-        OfferNew: 1,
+        OfferNew: 0,
         /* If you want offer the product as EXCLUSIVE */
-        OfferExclusive: 1,
+        OfferExclusive: 0,
         imgpath: "",
     },
     {
