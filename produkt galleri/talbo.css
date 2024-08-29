@@ -25,7 +25,7 @@ body{
 
 .carousel-container .track {
     display: inline-flex;
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 
 .carousel-container .carousel-inner {
@@ -34,11 +34,10 @@ body{
 
 .carousel-container .card-container {
     width: 320px;
-    flex-shrink: 0;
     height: 500px;
+    flex-shrink: 0;
     padding-right: 25px;
     box-sizing: border-box;
-    border: solid #fff;
 } 
 
 .carousel-container .card-container .card {
@@ -48,52 +47,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #000000;
-    padding: 16px; 
     color: #ffffff; 
     justify-content: space-between;
-}
-
-.nav button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #1a1a1a;
-    cursor: pointer;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.nav button:hover {
-    background-color: #fff;
-}
-
-.nav button .material-symbols-outlined {
-    font-size: 30px;
-    color: #fff;
-}
-
-.nav button .material-symbols-outlined:hover{
-    color:black;
-}
-
-.nav .prev {
-    left: -80px;
-    display: none;
-}
-
-.nav .prev.show{
-    display: block;
-}
-
-.nav .next {
-    right: -80px;
-}
-
-.nav .next.hide{
-   display: none; 
 }
 
 .carousel-container .card-container .card .img {
@@ -108,7 +63,14 @@ body{
     width: 250px;
     height: 250px;
     object-fit: contain; 
+    cursor: pointer;
+    transition: transform .5s ease;
 }
+
+.carousel-container .card-container .card .img img:hover {
+    transform: scale(1.1);
+}
+
 
 .card .info {
     flex-basis: 40px;
@@ -146,5 +108,50 @@ body{
     background-color: black;
     color: #fff;
     border: 3px solid #ff7b00;
+}
+
+.nav button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1a1a1a;
+    cursor: pointer;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/*nav buttons*/
+
+.nav button:hover {
+    background-color: #fff;
+}
+
+.nav button .material-symbols-outlined {
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav button .material-symbols-outlined:hover{
+    color:black;
+}
+
+.nav .prev {
+    left: -80px;
+    display: none;
+}
+
+.nav .prev.show{
+    display: block;
+}
+
+.nav .next {
+    right: -80px;
+}
+
+.nav .next.hide{
+   display: none; 
 }
 
