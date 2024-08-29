@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forside</title>
-  <meta name="description" content="Front page">
+  <title>Product page</title>
+  <meta name="description" content="Product page">
   <link rel="stylesheet" type="text/css" href="./main.css">
   <script src="./products.js" defer></script>
   <script src="./quantity.js" defer></script>
@@ -22,17 +22,32 @@
             <button type="button">search</button>
             <button type="button">login</button>
             <button type="button">wishlist</button>
-            <button type="button">cart</button>
+            <p type="button">0</p>
           </div>
       </div>
     </nav>
   </header>
-  <section>
-    <form class="productForm" id="product-1" action="javascript:;" onsubmit="addToCart()">
+  <br>
+  <section aria-label="Main item">
+    <form class="productForm" id="product-0" action="javascript:;" onsubmit="addToCart()">
       <button id="itemValueSubtract" type="button" aria-label="subtract">-</button>
       <input id="itemValue" type="number" min="0" value="1">
       <button id="itemValueAdd" type="button" aria-label="add">+</button>
       <button type="submit" id="buy">Føj Til Turv</button>
+    </form>
+  </section>
+  <br>
+  <section aria-label="additional items">
+    <form class="productForm" id="product-1" action="javascript:;" onsubmit="addToCartSingle(event)">
+      <button type="submit" aria-label="tilføj til kurv">Tilføj til kurv</button>
+    </form>
+    <br>
+    <form class="productForm" id="product-2" action="javascript:;" onsubmit="addToCartSingle(event)">
+      <button type="submit" aria-label="tilføj til kurv">Tilføj til kurv</button>
+    </form>
+    <br>
+    <form class="productForm" id="product-3" action="javascript:;" onsubmit="addToCartSingle(event)">
+      <button type="submit" aria-label="tilføj til kurv">Tilføj til kurv</button>
     </form>
   </section>
 </body>
