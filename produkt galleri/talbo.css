@@ -14,12 +14,40 @@ body{
 @media screen and (max-width: 768px) {
     .carousel-container {
         width: 70%;
+
+    .nav .next {
+        right: -50px;
+        }
+    .nav .prev {
+        left: -50px;
+        }
+    .nav button{
+        width: 45px;
+        height: 45px;
+        }
+    .nav button .material-symbols-outlined {
+        font-size: 20px;
+}
     }
 }
 
 @media screen and (max-width: 1024px) {
     .carousel-container {
-        width: 80%;
+        width: 70%;
+
+    .nav .next {
+        right: -50px;
+        }
+    .nav .prev {
+        left: -50px;
+        }
+    .nav button{
+        width: 45px;
+        height: 45px;
+        }
+    .nav button .material-symbols-outlined {
+        font-size: 20px;
+}
     }
 }
 
@@ -57,6 +85,8 @@ body{
     background-color: #808080;
     margin-bottom: 16px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-container .card-container .card .img img {
@@ -110,6 +140,10 @@ body{
     border: 3px solid #ff7b00;
 }
 
+
+
+/*nav buttons*/
+
 .nav button {
     width: 60px;
     height: 60px;
@@ -122,8 +156,6 @@ body{
     z-index: 10;
     cursor: pointer;
 }
-
-/*nav buttons*/
 
 .nav button:hover {
     background-color: #fff;
@@ -154,4 +186,3 @@ body{
 .nav .next.hide{
    display: none; 
 }
-
