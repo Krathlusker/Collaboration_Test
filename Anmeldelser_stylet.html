@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldings formular</title>  
+    <link rel="stylesheet" href="anmeldelser_stylet.css">
+</head>
+
+<body>
+    <div class="review-container">
+        <h1>Product Review</h1>
+        <form id="reviewForm">
+            <div class="rating">
+                <label>
+                    <input type="radio" name="rating" value="5">
+                    <span class="stars">★★★★★</span>
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4">
+                    <span class="stars">★★★★☆</span>
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3">
+                    <span class="stars">★★★☆☆</span>
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2">
+                    <span class="stars">★★☆☆☆</span>
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="1">
+                    <span class="stars">★☆☆☆☆</span>
+                </label>
+            </div>
+            <input name="name" type="text" id="name" placeholder="Your Name" required />
+            <textarea id="comment" placeholder="Write your review here..." required></textarea>
+            <button id="submit">Submit Review</button>
+        </form>
+
+        <div id="reviewsList">
+            <h2>Customer Reviews</h2>
+        
+            <h2>Bedømmelse:</h2>
+            <div id="ratingCounts">
+                <div id="count-1star">1 Stjerne: 0</div>
+                <div id="count-2star">2 Stjerner: 0</div>
+                <div id="count-3star">3 Stjerner: 0</div>
+                <div id="count-4star">4 Stjerner: 0</div>
+                <div id="count-5star">5 Stjerner: 0</div>
+            </div>
+        
+            <button id="sortByScore">Sort by Score</button>
+            <button id="sortByDate">Sort by Date</button>
+            <div id="reviews"></div>
+        </div>
+    </div>
+    <script src="Anmeldelser.js"></script>
+</body>
+</html>
