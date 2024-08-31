@@ -9,7 +9,7 @@ const products = [
         OfferNew: 1,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 1,
-        imgpath: "",
+        imgpath: "./img/42172.webp",
     },
     {
         id: 1,
@@ -21,7 +21,7 @@ const products = [
         OfferNew: 0,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 0,
-        imgpath: "",
+        imgpath: "./img/wheel.png",
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const products = [
         OfferNew: 1,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 1,
-        imgpath: "",
+        imgpath: "./img/71047_Prod.webp",
     },
     {
         id: 3,
@@ -45,7 +45,7 @@ const products = [
         OfferNew: 1,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 1,
-        imgpath: "",
+        imgpath: "./img/42179.webp",
     },
     {
         id: 4,

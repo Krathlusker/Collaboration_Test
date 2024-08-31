@@ -1,35 +1,85 @@
+// Hent antallet af varer i kurven
 const cartVisible = document.getElementById('cart-count').innerHTML;
 
-// for (i=0; i < ;)
-
-// Viser indholdet af localstorage
-// console.log(localStorage.cart);
-
-// Henter inholdet i localstorage
+// Henter indholdet i localStorage
 let cart = localStorage.getItem('cart');
 
-// Læser indholdet, og tæller hvor mange der er af hvert id og gemmer det i et object 'count'
+// Hvis der er varer i kurven
 if (cart) {
-    // 2. Konverter dataen til et array
+    // Konverter dataen til et array af IDs
     cart = cart.split(',').map(Number); // Split stringen ved ',' og konverter til tal
 
-    // 3. Opret et objekt til at tælle antallet af hver værdi
+    // Opret et objekt til at tælle antallet af hver værdi
     let count = {};
 
-    // 4. Tæl hver værdi i arrayet
+    // Tæl hver værdi i arrayet
     cart.forEach(function(value) {
         count[value] = (count[value] || 0) + 1;
     });
 
-    // console.log(typeof count)
-
-    // 5. Log resultatet    
+    // Log resultatet    
     console.log(count);
+
+    // Hent det element, hvor kurvens varer skal vises
+    const addCartItems = document.getElementById("cartlistItems");
+
+    // Loop gennem hvert produkt ID i `count` objektet
+    for (let id in count) {
+        const product = products.find(item => item.id == id);
+
+        if (product) {
+            const quantity = count[id]; // Antal af dette produkt
+
+            addCartItems.insertAdjacentHTML("beforeend", `
+                <hr class="cartlist__divider">
+                <div class="cartlist__content-wrapper">
+                    <div class="cartlist__content">
+                        <div class="cartlist__details">
+                            <div class="cartlist__img-wrapper">
+                                <img class="cartlist__img" src="${product.imgpath}" alt="${product.titel}">
+                            </div>
+                            <div class="cartlist__desc">
+                                <div class="cartlist__titel">${product.titel}</div>
+                                <div class="cartlist__blankspace"></div>
+                                <div class="cartlist__priceamount">
+                                    <div class="cartlist__price">${product.price.toFixed(2)} kr.</div>
+                                    <div class="cartlist__amount">
+                                        <button class="cartlist__btn-subtract" id="itemValueSubtract" type="button"
+                                            aria-label="subtract">-</button>
+                                        <input class="cartlist__quantity" id="itemValue" type="number" min="0"
+                                            value="${quantity}">
+                                        <button class="cartlist__btn-add" id="itemValueAdd" type="button"
+                                            aria-label="add">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartlist__wish-wrapper1">
+                            <div class="cartlist__wish">
+                                <div class="cartlist__wishicon">
+                                    <img class="cartlist__wishimg" src="./img/like-o.svg" alt="">
+                                </div>
+                                <p class="cartlist__wishtext">Skriv på ønskeliste</p>
+                            </div>
+                        </div>
+                        <div class="cartlist__remove">
+                            <div class="cartlist__wish-wrapper2">
+                                <div class="cartlist__wish">
+                                    <div class="cartlist__wishicon">
+                                        <img class="cartlist__wishimg" src="./img/like-o.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cartlist__removeicon-wrapper">
+                                <div class="cartlist__removeicon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+        }
+    }
 
 } else {
     console.log("Cart is empty or not found.");
 }
-
-
-
-// Det er jo bare gas. Og hvis det er for grovt, så må du sige det... <3 Jeg mener det i kærlig ånd <3

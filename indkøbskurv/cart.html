@@ -9,7 +9,6 @@
   <link rel="stylesheet" type="text/css" href="./cart.css">
   <script src="./products.js" defer></script>
   <script src="./cartCount.js" defer></script>
-  <script src="./quantity.js" defer></script>
 </head>
 <body>
   <!-- skal være 54px på mobile og 75px på desktop -->
@@ -32,48 +31,8 @@
   <main>
     <section>
       <div class="cartlist">
-        <div class="cartlist__item">
+        <div id="cartlistItems" class="cartlist__item">
           <div class="cartlist__availability">Tilgængelig nu</div>
-          <hr class="cartlist__divider">
-          <div class="cartlist__content-wrapper">
-            <div class="cartlist__content">
-              <div class="cartlist__details">
-                <img class="cartlist__img" src="./img/42172.webp" alt="Description from object!">
-                <div class="cartlist__desc">
-                  <div class="cartlist__titel">Titel</div>
-                  <div class="cartlist__blankspace"></div>
-                  <div class="cartlist__priceamount">
-                    <div class="cartlist__price">1234,12 kr.</div>
-                    <div class="cartlist__amount">
-                        <button class="cartlist__btn-subtract" id="itemValueSubtract" type="button" aria-label="subtract">-</button>
-                        <input class="cartlist__quantity" id="itemValue" type="number" min="0" value="1">
-                        <button class="cartlist__btn-add" id="itemValueAdd" type="button" aria-label="add">+</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="cartlist__wish-wrapper1">
-                <div class="cartlist__wish">
-                  <div class="cartlist__wishicon">
-                    <img class="cartlist__wishimg" src="./img/like-o.svg" alt="">
-                  </div>
-                  <p class="cartlist__wishtext">Skriv på ønskeliste</p>
-                </div>
-              </div>
-              <div class="cartlist__remove">
-                <div class="cartlist__wish-wrapper2">
-                  <div class="cartlist__wish">
-                    <div class="cartlist__wishicon">
-                      <img class="cartlist__wishimg" src="./img/like-o.svg" alt="">
-                    </div>
-                  </div>
-                </div>
-                <div class="cartlist__removeicon-wrapper">
-                  <div class="cartlist__removeicon"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
