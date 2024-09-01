@@ -165,3 +165,57 @@ prev.addEventListener('click', () => {
     track.style.transform = `translateX(-${carouselWidth * index}px)`;
 });
 
+
+/* Nikolaj script */
+const images = [
+    "produkt-img/image1.webp",
+    "produkt-img/image2.webp",
+    "produkt-img/image3.webp",
+    "produkt-img/image4.webp",
+    "produkt-img/image5.webp",
+    "produkt-img/image6.webp",
+    "produkt-img/image7.webp",
+    "produkt-img/image8.webp",
+    "produkt-img/image9.webp",
+    "produkt-img/image10.webp",
+    "produkt-img/image11.webp",
+    "produkt-img/image12.webp",
+    "produkt-img/image13.webp",
+];
+
+let currentIndex = 0;
+
+// Function to update the main image display
+function updateMainImage(index) {
+    const mainDisplay = document.getElementById('mainDisplay');
+    mainDisplay.src = images[index];
+}
+
+function initGallery() {
+    const thumbnailGallery = document.querySelector('.thumbnail-gallery');
+
+    // Loop through the images array 
+    images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Thumbnail ${index + 1}`;
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            updateMainImage(index);
+        });
+        thumbnailGallery.appendChild(img);
+    });
+
+    // Add event listeners to the Next and Previous buttons
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateMainImage(currentIndex);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateMainImage(currentIndex);
+    });
+}
+
+window.onload = initGallery;
