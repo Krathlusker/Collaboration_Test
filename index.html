@@ -1,29 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forside</title>
-  <meta name="description" content="Front page">
-  <link rel="stylesheet" type="text/css" href="index.css">
-
-  <script src="mitjs.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren P1™ 42172 | Technic | Officiel LEGO® Shop DK</title>
+    <meta name="description" content="Byg din egen racerbil">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="style.css">
+    <script src="js/scripts.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Test</h1>
-  </header>
 
-    <main>
-      <div>
-        <p>
-          Abe Land er bare mega sygt fedt. Det er fyldt med aber osv.
-          Hvis du går og er skør og fjollet, så er abe land bare noget
-          for dig. Du kan gå bananas med jungleeventyr og badutspring. 
-        </p>
-      </div>
+<body>
+
+    <header class="above-header">
+        <div class="above-header__inner">
+            <a href="" class="button kids-button" id="kids-button">
+                <svg width="37" height="16" viewBox="0 0 37 16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="Icon__StyledSVG-sc-lm07h6-0 gdiMlP UtilityBarstyles__KidsIcon-sc-1uwh8t8-2 fZmJyP" data-di-res-id="3fbf9b56-94f70645" data-di-rand="1724932114093"><path fill="currentColor" d="M29.493.597l.095.084 6.535 6.54a1 1 0 01.083 1.319l-.083.094-6.535 6.54a1 1 0 01-1.498-1.32l.083-.094 4.83-4.834-31.908.001A1 1 0 01.98 6.934l.116-.007h31.907l-4.83-4.833a1 1 0 01-.082-1.32l.083-.094a1 1 0 011.32-.083z"></path></svg>
+                <p>Legezone</p>
+            </a>
+            <div class="above-header__news-carousel"></div>
+        </div>
+    </header>
+
+    <header class="main-header">
+        <div class="main-header-inner">
+            <a href="./" class="main-header__logo-link">
+                <img src="images/brand-lego.svg" alt="Lego logo 1" class="main-header__logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item">
+                        <a href="#" class="main-nav__link">Shop</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#" class="main-nav__link">Se mere</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#" class="main-nav__link">Hjælp</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#" class="main-nav__link main-nav__link--button">Fortnite</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-header-additionals">
+                <div class="main-header-additionals__icon-wrapper">
+                    <div class="main-header-additionals__search">
+                        <svg class="main-header-additionals__icon search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" class="Icon__StyledSVG-sc-lm07h6-0 fgDCVZ" data-di-res-id="f479e982-c6ba566f" data-di-rand="1724925522054"><path d="M18 16.615c0 .375-.137.7-.412.973a1.331 1.331 0 01-.973.412 1.28 1.28 0 01-.973-.412l-3.71-3.7a7.41 7.41 0 01-4.317 1.342c-1.03 0-2.017-.2-2.958-.6a7.616 7.616 0 01-2.434-1.623 7.605 7.605 0 01-1.622-2.433A7.472 7.472 0 010 7.616c0-1.032.2-2.018.6-2.96a7.65 7.65 0 011.623-2.433A7.616 7.616 0 014.657.601 7.49 7.49 0 017.615 0c1.032 0 2.018.2 2.959.601.94.4 1.752.941 2.434 1.622a7.624 7.624 0 011.622 2.434c.4.941.601 1.927.601 2.959a7.403 7.403 0 01-1.342 4.316l3.71 3.71c.267.266.401.592.401.973m-5.539-9c0-1.334-.474-2.475-1.423-3.423C10.09 3.244 8.95 2.77 7.615 2.77c-1.333 0-2.475.474-3.423 1.422C3.243 5.14 2.77 6.28 2.77 7.616c0 1.334.474 2.475 1.423 3.423.948.949 2.09 1.422 3.423 1.422 1.335 0 2.475-.473 3.423-1.422.95-.948 1.423-2.09 1.423-3.423" fill="currentColor" fill-rule="evenodd"></path></svg>
+                    </div>
+                </div>
+                <div class="main-header-additionals__icon-wrapper">
+                    <svg class="main-header-additionals__icon favorites-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" aria-hidden="true" class="Icon__StyledSVG-sc-lm07h6-0 hhbQvj" data-di-res-id="f479e982-50a02c94" data-di-rand="1724925522054"><path d="M16.84 8.417L10 15.204 3.16 8.417A3.67 3.67 0 012 5.739C2 3.677 3.71 2 5.815 2a3.82 3.82 0 012.754 1.159l1.43 1.467 1.433-1.467A3.818 3.818 0 0114.186 2C16.289 2 18 3.677 18 5.739a3.673 3.673 0 01-1.16 2.678M9.986 18l.014-.014.014.014 8.223-8.116-.018-.019a5.678 5.678 0 001.78-4.126C20 2.569 17.398 0 14.187 0A5.829 5.829 0 0010 1.762 5.827 5.827 0 005.815 0C2.604 0 0 2.569 0 5.739a5.68 5.68 0 001.782 4.126" fill="currentColor" fill-rule="evenodd"></path></svg>
+                </div>
+                <div class="main-header-additionals__icon-wrapper">
+                    <a href="#" class="main-header-additionals__cart" id="main-header-cart">
+                        <svg class="main-header-additionals__icon cart-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" class="Icon__StyledSVG-sc-lm07h6-0 jRfmwl MainBarstyles__ActionIcon-sc-1cg7sjw-16 kfAPxF" data-di-res-id="4cc58ee7-b18f616e" data-di-rand="1724925522055"><g fill="currentColor" fill-rule="evenodd"><path d="M4 3.512v5.804c0 .377.349.684.779.684.43 0 .779-.307.779-.684V3.512C5.558 2.33 6.653 1.368 8 1.368c1.347 0 2.442.962 2.442 2.144v5.804c0 .377.35.684.78.684.43 0 .778-.307.778-.684V3.512C12 1.575 10.206 0 8 0S4 1.575 4 3.512z"></path><path d="M2.46 6.33c-.269 0-.489.194-.5.441L1.435 18.19a.436.436 0 00.131.332.52.52 0 00.348.149h12.151c.276 0 .501-.207.501-.462l-.525-11.436c-.011-.248-.23-.442-.5-.442H2.46zM14.448 20l-12.974-.001a1.591 1.591 0 01-1.064-.462 1.357 1.357 0 01-.408-1.03L.56 6.372C.595 5.602 1.277 5 2.11 5h11.78c.835 0 1.516.602 1.551 1.372l.56 12.197c0 .789-.697 1.431-1.553 1.431z"></path></g></svg>
+                        <p class="cart-count" id="cart-count">0</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="main-content-inner">
+
+            <!-- INDSÆT ALT HERUNDER -->
+            
+            <!-- INDSÆT ALT HEROVER -->
+
+        </div>
     </main>
-  
+
+    <footer class="main-footer">
+        <div class="main-footer-inner">
+
+            <section class="main-footer__row">
+                <div class="main-footer__column">
+                    <div class="main-footer__logo-wrapper">
+                        <img src="images/brand-lego.svg" alt="Lego logo 2" class="main-footer__logo">
+                    </div>
+                    <div class="language-selector main-footer__widget">
+                        <svg class="language-selector__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 17 24" aria-hidden="true" class="Icon__StyledSVG-sc-lm07h6-0 gVioTP RegionSelectorstyles__PointerIcon-sc-14dxhlg-2 izbKLk" data-di-rand="1724929144307" data-di-res-id="f26b51e8-66195ee3"><path d="M8.303.89c2.065 0 3.92.818 5.258 2.156a7.391 7.391 0 012.156 5.257c0 4.906-5.485 11.795-7.414 14.066C6.373 20.097.89 13.21.89 8.303c0-2.065.818-3.92 2.156-5.257A7.391 7.391 0 018.303.89zm0 3.558a3.84 3.84 0 00-2.734 1.12 3.84 3.84 0 00-1.12 2.735 3.84 3.84 0 001.12 2.735 3.84 3.84 0 002.734 1.12 3.84 3.84 0 002.735-1.12 3.84 3.84 0 001.12-2.735 3.84 3.84 0 00-1.12-2.734 3.84 3.84 0 00-2.735-1.12z" stroke="currentColor" stroke-width="1.779" fill="none"></path></svg>
+                        <p class="language-selector__text">Danmark</p>
+                    </div>
+                    <ul class="main-footer__items">
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Gavekort</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Find inspiration</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO kataloger</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Find en LEGO Store</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Om os</h2>
+                    <ul class="main-footer__items">
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Om LEGO Koncernen</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO nyheder</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Bæredygtighed</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Erklæring om gennemsigtighed i forsyningskæden</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO produktcertificering</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO job</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Danish Food Administration’s smiley-report</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO Compliance-hotline</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Kundeservice</h2>
+                    <ul class="main-footer__items">
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Kontakt os</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Byggevejledninger</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Manglende dele</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Levering og returnering</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Betalingsmetoder</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Vilkår og betingelser</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Tilbagekaldte produkter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Attraktioner</h2>
+                    <ul class="main-footer__items">
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO® House</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGOLAND® Parks</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGOLAND Discovery Centers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Mere fra os</h2>
+                    <ul class="main-footer__items">
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO® LIFE</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO Education</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO Ideas</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">LEGO Foundation</a>
+                        </li>
+                        <li class="main-footer__item">
+                            <a href="#" class="main-footer__item-link">Affiliate-programmet</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main-footer__row">
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Abonner på marketingmails</h2>
+                    <form action="/" id="newsletter-signup" class="form newsletter-signup-form">
+                        <div class="form__item-wrapper">
+                            <input type="text" placeholder="Din e-mailadresse" class="form__item">
+                        </div>
+                        <div class="form__item-wrapper">
+                            <button type="submit" class="button form__item"><svg width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="Icon__StyledSVG-sc-lm07h6-0 jkUmZk" data-di-res-id="999e8984-c0084ae2" data-di-rand="1724931105706"><path d="M1.825 28L18 14 1.825 0 0 1.715 14.196 14 0 26.285z" fill="currentColor"></path></svg></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="main-footer__column">
+                    <h2 class="main-footer__heading">Følg os</h2>
+                    <ul class="some-wrapper">
+                        <a href="#" class="some__link"><svg class="some__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" version="1.1"><title>FB09927C-DF4F-4FBA-BFBC-131DB517F427</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-727.000000, -702.000000)"><g transform="translate(59.000000, 285.000000)"><g transform="translate(668.000000, 363.000000)"><g transform="translate(0.000000, 54.000000)"><circle fill="#121029" cx="20" cy="20" r="20"/><g transform="translate(15.000000, 10.000000)" fill="#FFFFFF" fill-rule="nonzero"><g><path d="M10,0.131315226 C9.74025974,0.131315226 8.57142857,0 7.4025974,0 C4.80519481,0 2.98701299,1.57578271 2.98701299,4.5960329 L2.98701299,7.09102219 L0,7.09102219 L0,10.5052181 L2.98701299,10.5052181 L2.98701299,19.4346534 L6.49350649,19.4346534 L6.49350649,10.5052181 L9.48051948,10.5052181 L9.87012987,7.09102219 L6.49350649,7.09102219 L6.49350649,4.85866335 C6.49350649,3.80814154 6.75324675,3.15156542 8.18181818,3.15156542 L10,3.15156542 C10,3.15156542 10,0.131315226 10,0.131315226 Z"/></g></g></g></g></g></g></g></svg></a>
+                        <a href="#" class="some__link"><svg class="some__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1200 1227" fill="none"><circle cx="50%" cy="50%" r="50%" fill="#121029"/><g transform="translate(300 300), scale(0.5 0.5)"><path fill="#fff" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></g></svg></a>
+                        <a href="#" class="some__link"><svg class="some__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" version="1.1"><title>AF33F512-1539-4BCD-A9EB-85BF54B01CD0</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-848.000000, -702.000000)"><g transform="translate(59.000000, 285.000000)"><g transform="translate(668.000000, 363.000000)"><g transform="translate(121.000000, 54.000000)"><circle fill="#121029" cx="20" cy="20" r="20"/><g transform="translate(10.000000, 10.000000)" fill="#FFFFFF" fill-rule="nonzero"><path d="M10,1.8025 C12.67,1.8025 12.9866667,1.8125 14.0416667,1.86083333 C16.7516667,1.98416667 18.0175,3.27 18.1408333,5.96 C18.1891667,7.01416667 18.1983333,7.33083333 18.1983333,10.0008333 C18.1983333,12.6716667 18.1883333,12.9875 18.1408333,14.0416667 C18.0166667,16.7291667 16.7541667,18.0175 14.0416667,18.1408333 C12.9866667,18.1891667 12.6716667,18.1991667 10,18.1991667 C7.33,18.1991667 7.01333333,18.1891667 5.95916667,18.1408333 C3.2425,18.0166667 1.98333333,16.725 1.86,14.0408333 C1.81166667,12.9866667 1.80166667,12.6708333 1.80166667,10 C1.80166667,7.33 1.8125,7.01416667 1.86,5.95916667 C1.98416667,3.27 3.24666667,1.98333333 5.95916667,1.86 C7.01416667,1.8125 7.33,1.8025 10,1.8025 L10,1.8025 Z M10,-4.85722573e-16 C7.28416667,-4.85722573e-16 6.94416667,0.0116666667 5.8775,0.06 C2.24583333,0.226666667 0.2275,2.24166667 0.0608333333,5.87666667 C0.0116666667,6.94416667 -4.85722573e-16,7.28416667 -4.85722573e-16,10 C-4.85722573e-16,12.7158333 0.0116666667,13.0566667 0.06,14.1233333 C0.226666667,17.755 2.24166667,19.7733333 5.87666667,19.94 C6.94416667,19.9883333 7.28416667,20 10,20 C12.7158333,20 13.0566667,19.9883333 14.1233333,19.94 C17.7516667,19.7733333 19.775,17.7583333 19.9391667,14.1233333 C19.9883333,13.0566667 20,12.7158333 20,10 C20,7.28416667 19.9883333,6.94416667 19.94,5.8775 C19.7766667,2.24916667 17.7591667,0.2275 14.1241667,0.0608333333 C13.0566667,0.0116666667 12.7158333,-4.85722573e-16 10,-4.85722573e-16 Z M10,4.865 C7.16416667,4.865 4.865,7.16416667 4.865,10 C4.865,12.8358333 7.16416667,15.1358333 10,15.1358333 C12.8358333,15.1358333 15.135,12.8366667 15.135,10 C15.135,7.16416667 12.8358333,4.865 10,4.865 Z M10,13.3333333 C8.15916667,13.3333333 6.66666667,11.8416667 6.66666667,10 C6.66666667,8.15916667 8.15916667,6.66666667 10,6.66666667 C11.8408333,6.66666667 13.3333333,8.15916667 13.3333333,10 C13.3333333,11.8416667 11.8408333,13.3333333 10,13.3333333 Z M15.3383333,3.4625 C14.675,3.4625 14.1375,4 14.1375,4.6625 C14.1375,5.325 14.675,5.8625 15.3383333,5.8625 C16.0008333,5.8625 16.5375,5.325 16.5375,4.6625 C16.5375,4 16.0008333,3.4625 15.3383333,3.4625 Z" id="Shape"/></g></g></g></g></g></g></svg></a>
+                        <a href="#" class="some__link"><svg class="some__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" version="1.1"><title>5CB70A48-391F-4A36-B267-BF364C1656CD</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-908.000000, -702.000000)"><g transform="translate(59.000000, 285.000000)"><g transform="translate(668.000000, 363.000000)"><g transform="translate(181.000000, 54.000000)"><circle fill="#121029" cx="20" cy="20" r="20"/><path d="M28,12.4 C27.4,12.2 23.7,12 20,12 C16.3,12 12.6,12.2 12,12.4 C10.4,12.9 10,16.4 10,20 C10,23.6 10.4,27.1 12,27.6 C12.6,27.8 16.3,28 20,28 C23.7,28 27.4,27.8 28,27.6 C29.6,27.1 30,23.6 30,20 C30,16.4 29.6,12.9 28,12.4 L28,12.4 Z M18,24.5 L18,15.5 L24,20 L18,24.5 L18,24.5 Z" fill="#FFFFFF"/></g></g></g></g></g></svg></a>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main-footer__row">
+                <div class="main-footer__column">
+                    <ul class="main-footer__bottom-items">
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Politik om beskyttelse af personlige oplysninger</a>
+                        </li>
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Cookies</a>
+                        </li>
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Juridiske oplysninger</a>
+                        </li>
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Brugervilkår</a>
+                        </li>
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Tilgængelighed</a>
+                        </li>
+                        <li class="main-footer__bottom-item">
+                            <a href="#" class="main-footer__item-link">Cookieindstillinger</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main-footer__row">
+                <div class="main-footer__column">
+                    <p class="main-footer__text">LEGO System A/S, DK-7190 Billund, Danmark. Man skal være mindst 18 år for at kunne handle online. LEGO, LEGO logoet, minifiguren, DUPLO, FRIENDS-logoet, MINIFIGURES-logoet, DREAMZzz, NINJAGO, VIDIYO og MINDSTORMS er LEGO Gruppens varemærker. ©2024 The LEGO Group. Alle rettigheder forbeholdes. Hvis du bruger dette websted, accepterer du brugervilkårene.</p>
+                </div>
+            </section>
+
+        </div>
+    </footer>
+
 </body>
-</html> 
+
+</html>
