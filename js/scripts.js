@@ -114,6 +114,21 @@ function moveHandle(controlWidth, handlePos) {
     }
 }
 
+/* Fade-in */
+
+let fadeIn = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', (e) => {
+    for (let i = 0; i < fadeIn.length; i++) {
+        let wrapperPos = fadeIn[i].getBoundingClientRect().y;
+        let fadeInPos = window.innerHeight * 0.75;
+        
+        if (wrapperPos < fadeInPos && !fadeIn[i].classList.contains('is-faded-in')) {
+            fadeIn[i].classList.add('is-faded-in');
+        }
+    }
+}, false);
+
 /*Rose*/
 console.log ("jeg virker")
 
@@ -142,11 +157,11 @@ next.addEventListener('click', () => {
 });
 
 prev.addEventListener('click', () => {
-        index--;
-        next.classList.remove('hide');
-        if (index == 0) {
-            prev.classList.remove('show');
-        }
-        track.style.transform = `translateX(-${carouselWidth * index}px)`;
-    })
+    index--;
+    next.classList.remove('hide');
+    if (index == 0) {
+        prev.classList.remove('show');
+    }
+    track.style.transform = `translateX(-${carouselWidth * index}px)`;
+});
 

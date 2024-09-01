@@ -45,6 +45,19 @@ button {
     border: none;
 }
 
+/* Animationer */
+
+@keyframes section-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Variabler */
 
 :root {
@@ -89,6 +102,15 @@ body {
 .full-width {
     width: 100% !important;
     max-width: 100%!important;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.is-faded-in {
+    animation: section-fade-in 300ms ease-in forwards;
 }
 
 /* Styling til genanvendelige elementer */
@@ -625,6 +647,12 @@ h2 {
 }
 
 /*Rose*/
+
+.carousel-outer {
+    width: 100%;
+    padding: 30px 0;
+    background-color: var(--black);
+}
 
 .carousel-container {
     width: 1280px;
