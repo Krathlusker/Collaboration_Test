@@ -49,8 +49,8 @@ const products = [
     },
     {
         id: 4,
-        titel: "McLaren P1™",
-        price: 3499.95,
+        titel: "TEAM 14's Yndlingslego™",
+        price: 1414.14,
         stock: 3,
         info: "",
         /* If you want offer the product as NEW */

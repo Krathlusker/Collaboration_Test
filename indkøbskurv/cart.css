@@ -100,6 +100,7 @@
 .cartlist__priceamount {
     align-items: flex-end;
     gap: 3rem;
+    text-wrap: nowrap;
 }
 
 .cartlist__price {

@@ -4,6 +4,10 @@ const cartVisible = document.getElementById('cart-count').innerHTML;
 // Henter indholdet i localStorage
 let cart = localStorage.getItem('cart');
 
+// Definer addCartItems til path
+const addCartItems = document.getElementById("cartlistItems");
+
+
 // Hvis der er varer i kurven
 if (cart) {
     // Konverter dataen til et array af IDs
@@ -19,9 +23,6 @@ if (cart) {
 
     // Log resultatet    
     console.log(count);
-
-    // Hent det element, hvor kurvens varer skal vises
-    const addCartItems = document.getElementById("cartlistItems");
 
     // Loop gennem hvert produkt ID i `count` objektet
     for (let id in count) {
@@ -71,7 +72,7 @@ if (cart) {
                                 </div>
                             </div>
                             <div class="cartlist__removeicon-wrapper">
-                                <div class="cartlist__removeicon"></div>
+                                <button class="cartlist__removeicon" data-id="${id}"></button>
                             </div>
                         </div>
                     </div>
@@ -81,5 +82,39 @@ if (cart) {
     }
 
 } else {
-    console.log("Cart is empty or not found.");
+    window.location.href = "./empty-cart.html";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Tilføjer en event listener for remove-knappen
+    addCartItems.addEventListener('click', function(event) {
+        if (event.target && event.target.matches(".cartlist__removeicon")) {
+            const productId = event.target.getAttribute('data-id');
+
+            // Henter kurven fra localStorage
+            let cart = localStorage.getItem('cart');
+            if (cart) {
+                cart = cart.split(',').map(Number);
+                
+                // Filtrer alle forekomster af det pågældende produkt-ID ud af kurven
+                cart = cart.filter(id => id !== Number(productId));
+                
+                // Opdater localStorage med den nye kurv
+                localStorage.setItem('cart', cart.join(','));
+
+                // Fjern produktet fra DOM'en
+                const productElement = document.querySelector(`.cartlist__content-wrapper[data-id="${productId}"]`);
+                if (productElement) {
+                    productElement.remove();
+                }
+
+                location.reload()
+            }
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = localStorage.getItem('cart')?.split(',') || [];
+    document.getElementById('cart-count').textContent = `${cart.length}`;
+});

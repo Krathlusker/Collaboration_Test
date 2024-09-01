@@ -54,7 +54,8 @@ function addToCart(val) {
                 localStorage.removeItem('cart');
                 localStorage.setItem('cart', currentCart);
             }
-        alert(products[i].titel + " " + "tilføjet til kurv")
+            
+            location.reload()
         } 
     }
 }
@@ -81,7 +82,13 @@ function addToCartSingle(event) {
                 localStorage.removeItem('cart');
                 localStorage.setItem('cart', currentCart);
             }
-            alert(products[i].titel + " " + "tilføjet til kurv")
+
+            location.reload()
         } 
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = localStorage.getItem('cart')?.split(',') || [];
+    document.getElementById('cart-count').textContent = `${cart.length}`;
+});
