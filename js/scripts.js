@@ -39,7 +39,7 @@ let img360List = [
     "42172-202408-PDP-FeatureExplore_70.webp", "42172-202408-PDP-FeatureExplore_71.webp"
 ];
 
-const img360Location = "../images/360-view/";
+const img360Location = "images/360-view/";
 const img360String = "42172-202408-PDP-FeatureExplore_";
 const img360Format = ".webp";
 
