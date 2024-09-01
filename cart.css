@@ -1,11 +1,19 @@
 @charset "UTF-8";
 /* This is a CSS file */
 
+
 .CheckoutStayInBottom {
-    width: 100%;
     height: auto;
-    position: fixed;
     bottom: 1%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#CheckoutStayInBottom-container {
+    max-width: 870px;
+    display: flex;
+    flex-direction: column;
 }
 
 .CheckoutStayInBottom * {
@@ -17,7 +25,12 @@
 }
 
 #OrderGap {
-    gap: 10%;
+    gap: 1rem;
+}
+
+.momsgap {
+    display: flex;
+    gap: 1rem
 }
 
 .MomsStyling {
@@ -25,7 +38,7 @@
     flex-direction: row;
 }
 
-.PriceStyling h2 {
+.PriceStyling h3 {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -40,9 +53,15 @@
     display: flex;
 }
 
-.cartlist {
-    background-color: fff;
+.cartlist-container {
+    display: flex;
+    justify-content: center;
     width: 100%;
+}
+
+.cartlist {
+    background-color: #fff;
+    max-width: 1000px;
 }
 
 .cartlist__item {
@@ -65,6 +84,7 @@
 
 .cartlist__details {
     width: 100%;
+    gap: 1rem;
 }
 
 .cartlist__availability {

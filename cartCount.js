@@ -115,3 +115,37 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Hent alle pris-elementerne og tilsvarende mængder
+const prices = document.querySelectorAll('.cartlist__price');
+const quantities = document.querySelectorAll('.cartlist__quantity');
+
+let totalPrice = 0;
+
+// Loop igennem priserne og tilsvarende mængder for at beregne totalPrice
+prices.forEach(function(priceElement, index) {
+    // Konverter prisen til et tal
+    const price = parseFloat(priceElement.innerHTML);
+    
+    // Konverter mængden til et tal fra value-attributten
+    const quantity = parseInt(quantities[index].value);
+    
+    // Beregn den samlede pris for dette produkt
+    const productTotal = price * quantity;
+
+    // Læg produktets totale pris til totalPrice
+    totalPrice += productTotal;
+
+});
+
+
+// Opdater totalprice-elementet med den samlede pris
+document.querySelector('.totalprice').innerHTML = `${totalPrice.toFixed(2)} kr.`;
+
+function moms(totalPrice) {
+    return totalPrice * 0.25
+}
+
+const totalMoms = moms(totalPrice)
+
+document.querySelector('.moms').innerHTML = `${totalMoms.toFixed(2)} kr.`;
