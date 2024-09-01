@@ -213,7 +213,7 @@ const products = [
         OfferNew: 1,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 1,
-        imgpath: "./images/img/prod18.webp",
+        imgpath: "./images/img/prod19.webp",
     },
     {
         id: 18,
@@ -225,7 +225,7 @@ const products = [
         OfferNew: 1,
         /* If you want offer the product as EXCLUSIVE */
         OfferExclusive: 1,
-        imgpath: "./images/img/prod19.webp",
+        imgpath: "./images/img/prod18.webp",
     },
     {
         id: 19,
