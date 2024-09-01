@@ -64,6 +64,7 @@ button {
     /* Farver */
     --lego-yellow: #ffd502;
     --lego-blurple: #201d48;
+    --lego-light-blue: #abd9ff;
     --lego-dark-blue: #18152d;
     --lego-red: #d0021b;
     --lego-orange: #e96f14;
@@ -169,6 +170,28 @@ input[type=button],
     border-radius: var(--border-radius);
 }
 
+.kids-button {
+    background-color: var(--lego-light-blue);
+    color: var(--black);
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+    text-transform: uppercase;
+    padding: 6px 12px 4px;
+    font-size: var(--font-size-tiny);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.05em;
+    gap: 10px;
+}
+
+.button__arrow-back {
+    position: relative;
+    top: -1px;
+    height: 7px;
+    width: auto;
+    transform: rotateY(180deg);
+}
+
 .newsletter-signup-form {
     display: flex;
 }
@@ -192,6 +215,15 @@ input[type=button],
     width: 100%;
     background-color: var(--lego-light-gray);
     display: none;
+}
+
+.above-header__inner {
+    height: 100%;
+    width: var(--content-width);
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .mobile-header {
@@ -334,7 +366,7 @@ input[type=button],
 }
 
 .main-nav__link--button {
-    padding: 8px 20px;
+    padding: 10px 20px 8px;
     background-color: var(--white);
     color: var(--lego-red);
     border-radius: var(--border-radius);
@@ -418,6 +450,13 @@ input[type=button],
     .main-header {
         display: block;
     }
+}
+
+/* Styling til hovedindhold */
+
+.main-content {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Styling til footer og tilhørende elementer */
