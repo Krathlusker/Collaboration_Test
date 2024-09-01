@@ -1419,23 +1419,26 @@ h2 {
     height: 3rem;
 }
 
-.productbuy__value button:first-of-type {
+.productbuy__value button:first-of-type, .cartlist__amount button:first-of-type {
     background-color:rgb(255, 255, 255);
     border: 1px solid rgb(224, 224, 224);
     border-radius: 5px 0px 0px 5px;
     height: 3rem;
     font-size: 2rem;
+    align-items: center;
 }
 
-.productbuy__value button:last-of-type {
+.productbuy__value button:last-of-type, .cartlist__amount button:last-of-type {
     background-color:rgb(255, 255, 255);
     border: 1px solid rgb(224, 224, 224);
     border-radius: 0px 5px 5px 0px;
     height: 3rem;
     font-size: 2rem;
+    align-items: center;
 }
 
-.productbuy__value input {
+.productbuy__value input, .cartlist__amount input {
+    display: flex;
     border: 1px solid rgb(224, 224, 224);
     text-align: center;
     width: 5rem;
@@ -1456,3 +1459,14 @@ h2 {
     width: 1rem;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

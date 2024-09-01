@@ -46,7 +46,8 @@ if (cart) {
                                     <div class="cartlist__price">${product.price.toFixed(2)} kr.</div>
                                     <div class="cartlist__amount">
                                         <button class="cartlist__btn-subtract" id="itemValueSubtract" type="button"
-                                            aria-label="subtract">-</button>
+                                            // aria-label="subtract">-</button>
+                                        <p class="cartlist__amount-text">antal</p>
                                         <input class="cartlist__quantity" id="itemValue" type="number" min="0"
                                             value="${quantity}">
                                         <button class="cartlist__btn-add" id="itemValueAdd" type="button"
