@@ -168,19 +168,19 @@ prev.addEventListener('click', () => {
 
 /* Nikolaj script */
 const images = [
-    "produkt-img/image1.webp",
-    "produkt-img/image2.webp",
-    "produkt-img/image3.webp",
-    "produkt-img/image4.webp",
-    "produkt-img/image5.webp",
-    "produkt-img/image6.webp",
-    "produkt-img/image7.webp",
-    "produkt-img/image8.webp",
-    "produkt-img/image9.webp",
-    "produkt-img/image10.webp",
-    "produkt-img/image11.webp",
-    "produkt-img/image12.webp",
-    "produkt-img/image13.webp",
+    "images/produkt-img/image1.webp",
+    "images/produkt-img/image2.webp",
+    "images/produkt-img/image3.webp",
+    "images/produkt-img/image4.webp",
+    "images/produkt-img/image5.webp",
+    "images/produkt-img/image6.webp",
+    "images/produkt-img/image7.webp",
+    "images/produkt-img/image8.webp",
+    "images/produkt-img/image9.webp",
+    "images/produkt-img/image10.webp",
+    "images/produkt-img/image11.webp",
+    "images/produkt-img/image12.webp",
+    "images/produkt-img/image13.webp"
 ];
 
 let currentIndex = 0;
