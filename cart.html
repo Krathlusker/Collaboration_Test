@@ -9,10 +9,12 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="js/scripts.js" defer></script>
     <script src="./products.js" defer></script>
     <script src="./quantity.js" defer></script>
+    <script src="./cartCount.js" defer></script>
     <script src="./cartLogoCounter.js" defer></script>
 </head>
 
@@ -85,338 +87,34 @@
 
     <main class="main-content">
         <div class="main-content-inner">
-            
-            <!-- Nikolajs Del -->
-            <section class="top-section">
-                <div class="gallery-container">
-                    <div class="main-image">
-                    <button id="prevBtn" class="nav-btn prev-btn">&#10094;</button> <!-- Left arrow -->
-                        <img id="mainDisplay" src="images/produkt-img/image1.webp" alt="Main Image"> 
-                    <button id="nextBtn" class="nav-btn next-btn">&#10095;</button> <!-- Right arrow -->
-                    </div>
-                        <div class="thumbnail-gallery">
-                            <!-- Thumbnails  -->
-                        </div>
-                    </div>
-                    <!-- FREDERIK DELE START -->
-                    <section class="productbuy" aria-label="Buy">
-                        <div class="productbuy__info-container">
-                            <div class="productbuy__info">
-                                <h3>McLaren P1™</h3>
-                                <img src="./img/technic_logo_pos_100h.png" alt="">
-                            </div>
-                            <div class="productbuy__ps">
-                                <h4 class="productbuy__p1">3499,95 kr.</h4>
-                                <p class="productbuy__p2">Tilgængelig nu</p>
-                            </div>
-                        </div>
-                        <form class="productForm productbuy__form" id="product-0" action="javascript:;" onsubmit="addToCart()">
-                            <div class="productbuy__value-container">
-                                <div class="productbuy__value">
-                                    <button id="itemValueSubtract" type="button" aria-label="subtract">-</button>
-                                    <input id="itemValue" type="number" min="0" value="1">
-                                    <button id="itemValueAdd" type="button" aria-label="add">+</button>
-                                </div>
-                                <div class="productbuy__limit">
-                                    <p class="productbuy__p3">Grænse 3</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.29 350.29"><path d="M338.29 169.14c0 93.37-75.78 169.15-169.15 169.15C75.776 338.29 0 262.51 0 169.14 0 75.776 75.776 0 169.14 0c93.37 0 169.15 75.776 169.15 169.14z" style="stroke-linejoin:round;stroke: rgb(117, 117, 117);stroke-width:12;fill:none" transform="translate(6 6)"></path><path d="M0 30.61Q0 17.919 9.651 8.96T32.773 0q13.673.001 23.324 8.96 9.65 8.959 9.652 21.65-.001 12.507-9.652 21.652-9.651 8.958-23.324 8.958-13.47 0-23.122-8.958Q0 43.117 0 30.61zm62.933 57.301v176.2H3.217v-176.2l59.716.001" style="fill:rgb(117, 117, 117)" transform="translate(142.1 43.98)"></path></svg>
-                                </div>
-                            </div>
-                            <button type="submit" id="buy">Føj Til Turv</button>
-                        </form>
-                    </section>
-                    <!-- FREDERIK DELE SLUT -->
-                <div class="info-box">
-                    <div class="info-item">
-                        <div class="info-text">
-                            <h3>18+</h3>
-                            <p>Alder</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-text">
-                            <h3>3893</h3>
-                            <p>Dele</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-text">
-                            <h3>3500</h3>
-                            <p>LEGO<sup>®</sup> Insiders-point</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-text">
-                            <h3>42172</h3>
-                            <p>Vare</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-text">
-                            <h3>H: 6" (14cm)<br>B: 10" (25cm)<br>D: 24" (59cm)</h3>
-                            <p>Dimensioner</p>
-                        </div>
-                    </div>
+            <section>
+                <div class="cartlist">
+                  <div id="cartlistItems" class="cartlist__item">
+                    <div class="cartlist__availability">Tilgængelig nu</div>
+                  </div>
                 </div>
-            </section>
-            <!-- JANNICKS DEL -->
-            <section class="page-section accordion-element fade-in" id="accordion-360view">
-                <div class="accordion-element-inner">
-                    <div class="accordion-element__top-section">
-                        <h2 class="accordion-element__heading">Se nærmere</h2>
-                        <p class="small-heading">Feature explorer</p>
+              </section>
+              <section class="CheckoutStayInBottom">
+                <div class="CheckoutStyling">
+                  <div class="MomsStyling">
+                    <!-- Ordre total tekst -->
+                    <div id="OrderGap">
+                      <div>Ordretotal</div>
+                      <div>
+                        <p>Inklusive MOMS</p>
+                        <p>123,45 kr.</p>
+                      </div>
                     </div>
-                    <div class="mclaren-360view-wrapper">
-                        <div class="mclaren-360view" id="mclaren-360view">
-                            <div class="mclaren-360view__images" id="mclaren-360view-images">
-                                <img id="mclaren-360view-image" src="images/360-view/42172-202408-PDP-FeatureExplore_0.webp" alt="McLaren 360 view image number 1">
-                            </div>
-                        </div>
-                        <div class="mclaren-360view__bottom-content">
-                            <svg class="mclaren-360view__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 -19.72884698803321 326.1341145230034 76.59772832608634"><path d="M54.757 41.73h12.495V17.978h-7.25c-3.064 0-5.127 1.297-7.25 3.006-2.298 2.004-10.609 9.195-10.609 9.195V18.036h-7.367c-4.185 0-6.307 1.474-8.606 3.3C24.52 22.517 0 41.732 0 41.732h14.853L29.59 29.589V41.73h11.965l13.203-11.965zm27.29 0h20.217V35.6H85.7c-1.532 0-3.183-.942-3.183-3.948v-.413c0-2.652 1.356-3.772 3.124-3.772h16.622v-6.19h-20.63c-8.429 0-11.788 3.655-11.788 9.314v1.886c0 6.601 3.654 9.254 12.2 9.254zm45.149 0v-6.247h-9.666V18.036h-12.555V41.79h22.221zm24.284-7.956c0 1.178-.472 1.886-1.886 1.886h-6.778c-1.18 0-1.946-.354-1.946-1.238 0-.943.472-1.474 1.946-1.474h8.664zm12.496 0v-4.48c0-5.128-3.36-8.016-10.551-8.016h-22.398v5.894h17.977c1.828 0 2.476.59 2.476 2.004v.236h-14.323c-6.012 0-8.134 2.534-8.134 5.835v.648a4.798 4.798 0 0 0 1.356 3.537c1.768 1.65 5.128 2.18 9.666 2.18h12.437c8.134.119 11.494-1.709 11.494-7.838zm15.265-6.307h7.84v-6.19h-16.032c-2.594 0-4.244 1.357-4.244 3.655v16.799h12.554V27.467zm32.36 1.12c0 .884-.413 1.414-1.828 1.414h-8.9v-.825c0-1.179.472-1.886 1.945-1.886h6.837c1.12 0 1.945.354 1.945 1.297zm11.847-.472v-.825c0-3.36-1.887-5.953-10.669-5.953h-12.908c-8.134 0-11.494 2.77-11.494 8.782v3.537c0 5.128 3.36 8.075 10.61 8.075h22.928v-5.953H203.35c-1.828 0-2.476-.53-2.476-1.945v-.177h14.382c5.069-.06 8.193-1.71 8.193-5.54zm35.777 13.616V30.296c0-7.132-3.418-9.018-13.556-9.018h-19.864V41.73h12.555V27.938h3.36c3.772 0 5.01 2.181 5.01 4.539v9.313h12.495z"/><path d="M282.625 0c-6.366 0-15.502 1.886-25.404 5.482A132.955 132.955 0 0 0 232.112 17.8a71.79 71.79 0 0 1 23.695-4.48c11.198 0 19.332 4.304 7.485 19.452C298.244 9.962 297.242 0 282.625 0z"/></svg>
-                            <div class="drag-control-wrapper">
-                                <p class="drag-control__descriptor">360° Spin</p>
-                                <div class="drag-control" id="drag-control">
-                                    <div class="drag-control__stop" id="drag-control-stop-1"></div>
-                                    <div class="drag-control__stop" id="drag-control-stop-2"></div>
-                                    <div class="drag-control__stop" id="drag-control-stop-3"></div>
-                                    <div class="drag-control__stop" id="drag-control-stop-4"></div>
-                                    <div class="drag-control__handle" id="drag-control-handle"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  <div class="PriceStyling">
+                      <h2>PRIS</h2>
+                  </div>
                 </div>
-            </section>
-
-            <!-- Rose -->
-            <section class="carousel-outer fade-in">
-                <div class="carousel-container">
-                    <div class="carousel-inner">
-                        <div class="track">
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod1.webp" alt="McLaren P1"></div>
-                                    <div class="info">McLaren P1™</div>
-                                    <div class="price">3499,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod2.webp" alt="Mercedes-Benz G 500 PROFESSIONAL Line"></div>
-                                    <div class="info">Mercedes-Benz G 500 PROFESSIONAL Line</div>
-                                    <div class="price">1949,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod3.webp" alt="NASA Apollo-månebil LRV"></div>
-                                    <div class="info">NASA Apollo-månebil - LRV</div>
-                                    <div class="price">1699,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod4.webp" alt="Volvo FMX lastbil og EC230 elektrisk gravemaskine"></div>
-                                    <div class="info">Volvo FMX-lastbil og EC230 elektrisk gravemaskine</div>
-                                    <div class="price">1549,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod5.webp" alt="Porsche GT4 e-Performance-racerbil"></div>
-                                    <div class="info">Porsche GT4 e-Performance-racerbil</div>
-                                    <div class="price">1329,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod6.webp" alt="Mercedes-AMG F1 W14 E Performance"></div>
-                                    <div class="info">Mercedes-AMG F1 W14 E Performance</div>
-                                    <div class="price">1699,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod7.webp" alt="Koenigsegg Jesko Absolut-hyperbil - grå"></div>
-                                    <div class="info">Koenigsegg Jesko Absolut-hyperbil - grå</div>
-                                    <div class="price">469,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod8.webp" alt="Emirates Team New Zealand AC75-yacht"></div>
-                                    <div class="info">Emirates Team New Zealand AC75-yacht</div>
-                                    <div class="price">1049,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod9.webp" alt="Koenigsegg Jesko Absolut-hyperbil - hvid"></div>
-                                    <div class="info">Koenigsegg Jesko Absolut-hyperbil - hvid</div>
-                                    <div class="price">469,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod10.webp" alt="Ferrari Daytona SP3"></div>
-                                    <div class="info">Ferrari Daytona SP3</div>
-                                    <div class="price">3499,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod11.webp" alt="Lamborghini Sián FKP 37"></div>
-                                    <div class="info">Lamborghini Sián FKP 37</div>
-                                    <div class="price">3499,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod12.webp" alt="Liebherr LR 13000 bæltekran"></div>
-                                    <div class="info">Liebherr LR 13000 bæltekran</div>
-                                    <div class="price">5299,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod13.webp" alt="McLaren Formula 1™-racerbil"></div>
-                                    <div class="info">McLaren Formula 1™-racerbil</div>
-                                    <div class="price">1549,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod14.webp" alt="PEUGEOT 9X8 24H Le Mans Hybrid Hypercar"></div>
-                                    <div class="info">PEUGEOT 9X8 24H Le Mans Hybrid Hypercar</div>
-                                    <div class="price">1549,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod15.webp" alt="MW M 1000 RR"></div>
-                                    <div class="info">BMW M 1000 RR</div>
-                                    <div class="price">1899,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod16.webp" alt="Porsche 911 RSR"></div>
-                                    <div class="info">Porsche 911 RSR</div>
-                                    <div class="price">1549,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod17.webp" alt="2022 Ford GT"></div>
-                                    <div class="info">2022 Ford GT</div>
-                                    <div class="price">1099,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod18.webp" alt="Jorden og Månen i kredsløb"></div>
-                                    <div class="info">Jorden og Månen i kredsløb</div>
-                                    <div class="price">699,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod19.webp" alt="Ferrari Daytona SP3: The Sense of Perfection"></div>
-                                    <div class="info">Ferrari Daytona SP3: The Sense of Perfection</div>
-                                    <div class="price">549,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <div class="img"><img src="images/img/prod20.webp" alt="Yamaha MT-10 SP"></div>
-                                    <div class="info">Yamaha MT-10 SP</div>
-                                    <div class="price">1799,95 kr.</div>
-                                    <button class="basket">Føj Til Kurv</button>
-                                </div>
-                            </div>
-                        </div> 
-                    </div> 
-        
-                    <div class="nav">
-                        <button class="prev">
-                            <span class="material-symbols-outlined">arrow_back_ios</span>
-                        </button>
-                        <button class="next">
-                            <span class="material-symbols-outlined">arrow_forward_ios</span>
-                        </button>
-                    </div>
+                <div>
+                  <button type="button">Hurtig Betaling</button>
+                  <button type="button">Kasse</button>
                 </div>
-            </section>
-
-            <!-- ANTONS DEL -->
-            <section class="review-container fade-in">
-                <h1>Product Review</h1>
-                <form id="reviewForm">
-                    <div class="rating">
-                        <label>
-                            <input type="radio" name="rating" value="5">
-                            <span class="stars">★★★★★</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="4">
-                            <span class="stars">★★★★☆</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="3">
-                            <span class="stars">★★★☆☆</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="2">
-                            <span class="stars">★★☆☆☆</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="rating" value="1">
-                            <span class="stars">★☆☆☆☆</span>
-                        </label>
-                    </div>
-                    <input name="name" type="text" id="name" placeholder="Your Name" required />
-                    <textarea id="comment" placeholder="Write your review here..." required></textarea>
-                    <button type="submit" id="submit">Submit Review</button>
-                </form>
-        
-                <div id="reviewsList">
-                    <h2>Customer Reviews</h2>
-                
-                    <h2>Bedømmelse:</h2>
-                    <div id="ratingCounts">
-                        <div id="count-1star">1 Stjerne: 0</div>
-                        <div id="count-2star">2 Stjerner: 0</div>
-                        <div id="count-3star">3 Stjerner: 0</div>
-                        <div id="count-4star">4 Stjerner: 0</div>
-                        <div id="count-5star">5 Stjerner: 0</div>
-                    </div>
-                
-                    <button type="button" id="sortByScore">Sort by Score</button>
-                    <button type="button" id="sortByDate">Sort by Date</button>
-                    <div id="reviews"></div>
-                </div>
-            </section>
-
+              </section>
         </div>
     </main>
 

@@ -1203,3 +1203,106 @@ h2 {
     text-align: center; 
     padding: 5px;
 }
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.productbuy {
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.productbuy__info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.productbuy__info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.productbuy__info img {
+    width: auto;
+    height: 1.2rem;
+}
+
+.productbuy__ps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.productbuy__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+
+.productbuy__form button {
+    border-radius: 2rem;
+    max-width: 20rem;
+}
+
+.productbuy__value-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.productbuy__value {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+}
+
+.productbuy__value button:first-of-type {
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px 0px 0px 5px;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.productbuy__value button:last-of-type {
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 0px 5px 5px 0px;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.productbuy__value input {
+    border: 1px solid rgb(224, 224, 224);
+    text-align: center;
+    width: 5rem;
+    font-size: 1.2rem;
+}
+
+.productbuy__limit {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.productbuy__limit p {
+    text-wrap: nowrap;
+}
+
+.productbuy__limit svg {
+    width: 1rem;
+}
+

@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* This is a CSS file */
+
+.CheckoutStayInBottom {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 1%;
+}
+
+.CheckoutStayInBottom * {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+#OrderGap {
+    gap: 10%;
+}
+
+.MomsStyling {
+    display: flex;
+    flex-direction: row;
+}
+
+.PriceStyling h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.ManglerClassNavn {
+    border-top: 1px solid rgb(224, 224, 224);
+    bottom: 1%;
+}
+
+.cartlist * {
+    display: flex;
+}
+
+.cartlist {
+    background-color: fff;
+    width: 100%;
+}
+
+.cartlist__item {
+    height: auto;
+    max-height: fit-content;
+    flex-direction: column;
+}
+
+.cartlist__content-wrapper {
+    box-sizing: border-box;
+    padding: 1rem;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cartlist__content {
+    gap: 2rem;
+    width: 100%;
+}
+
+.cartlist__details {
+    width: 100%;
+}
+
+.cartlist__availability {
+    padding: 1rem;
+}
+
+.cartlist__divider {
+    margin: 0;
+}
+
+.cartlist__img-wrapper {
+    width: 11rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.cartlist__img {
+    width: 100%;
+    height: auto;
+    max-height: 4.8rem;
+    object-fit: contain;
+}
+
+.cartlist__desc {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartlist__blankspace {
+    height: 100%;
+}
+
+.cartlist__priceamount {
+    align-items: flex-end;
+    gap: 3rem;
+    text-wrap: nowrap;
+}
+
+.cartlist__price {
+    flex: none;
+}
+
+.cartlist__quantity {
+    text-align: center;
+    width: 4rem;
+}
+
+.cartlist__wish-wrapper1 {
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
+.cartlist__wish-wrapper2 {
+    display: none;
+}
+
+.cartlist__wish {
+    gap: 1rem;
+}
+
+.cartlist__wishicon {
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    padding: 0.5rem;
+    flex: none;
+}
+
+.cartlist__wishimg {
+    width: 100%;
+    max-height: 1.2rem;
+}
+
+.cartlist__wishtext {
+    margin: 0;
+    align-items: center;
+    flex: none;
+}
+
+.cartlist__remove {
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.cartlist__removeicon-wrapper {
+    width: fit-content;
+}
+
+.cartlist__removeicon {
+    box-sizing: border-box;
+    padding-top: 2.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #005ad2;
+    mask: url("./img/trash.svg") no-repeat;
+    mask-position: center;
+}
+
+.cartlist__price {
+    width: 8rem;
+}
+
+@media only screen and (max-width: 1100px) {
+    .cartlist__amount {
+        display: none;
+    }
+
+    .cartlist__wish-wrapper1 {
+        display: none;
+    }
+      
+    .cartlist__wish-wrapper2 {
+        display: inline;
+        height: fit-content;
+    }
+
+    .cartlist__price {
+        width: 100%;
+    }
+
+  }
