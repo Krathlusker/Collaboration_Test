@@ -996,4 +996,130 @@ h2 {
 
     .info-text p {
         font-size: 12px; 
-    }}
+    }
+}
+
+/* Anton */
+
+.review-container {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.review-container h1,
+.review-container h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating label {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    padding: 0 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.stars {
+    color: #ddd;
+}
+
+.stars:hover {
+    color: #ffdd00; 
+}
+
+.rating input:checked ~ .stars {
+    color: #ffdd00;
+}
+
+.review-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-container textarea,
+.review-container #name {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.review-container button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: rgb(0, 90, 210);
+    border: 2px solid rgb(0, 90, 210);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.review-container button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(0, 90, 210);
+}
+
+.review-container #reviewsList {
+    margin-top: 30px;
+}
+
+.review {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.review-rating {
+    color: #ffdd00;
+    font-size: 20px;
+}
+
+.review-name {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.review-comment {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.review-container #ratingCounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 10px; 
+    font-size: 14px;
+}
+
+.review-container #ratingCounts > div {
+    text-align: center; 
+    padding: 5px;
+}
