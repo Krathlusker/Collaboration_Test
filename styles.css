@@ -191,6 +191,70 @@ input[type=button],
     height: 55px;
     width: 100%;
     background-color: var(--lego-light-gray);
+    display: none;
+}
+
+.mobile-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 51px;
+    box-sizing: padding-box;
+    border-bottom: 2px solid var(--lego-yellow);
+    background-color: var(--white);
+    z-index: 3;
+}
+
+.mobile-header-inner {
+    height: 100%;
+    width: var(--content-width);
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    gap: 10px;
+}
+
+.hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hamburger__line {
+    height: 2px;
+    width: 20px;
+    background-color: var(--black);
+}
+
+.hamburger__text {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.5rem;
+}
+
+.mobile-header__logo-link {
+    display: inline-block;
+    height: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.mobile-header__logo {
+    height: 100%;
+    width: auto;
 }
 
 .main-header {
@@ -200,7 +264,8 @@ input[type=button],
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
+    display: none;
 }
 
 .main-header-inner {
@@ -338,6 +403,21 @@ input[type=button],
 
 .cart-count::after {
     content: ')';
+}
+
+@media screen and (min-width: 767px) {
+
+    .above-header {
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .main-header {
+        display: block;
+    }
 }
 
 /* Styling til footer og tilhørende elementer */
