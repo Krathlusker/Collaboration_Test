@@ -11,7 +11,7 @@ const addCartItems = document.getElementById("cartlistItems");
 // Hvis der er varer i kurven
 if (cart) {
     // Konverter dataen til et array af IDs
-    cart = cart.split(',').map(Number); // Split stringen ved ',' og konverter til tal
+    cart = cart.split(',').filter(item => item !== '').map(Number); // Split stringen ved ',' og konverter til tal
 
     // Opret et objekt til at tælle antallet af hver værdi
     let count = {};
