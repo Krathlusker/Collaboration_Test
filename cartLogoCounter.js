@@ -5,8 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check om cart er null eller en tom streng
     const cartItems = cart ? cart.split(',').filter(item => item !== '') : [];
 
-    // Opdater antallet i p-tag med id "cart-count"
-    document.getElementById('cart-count').textContent = `${cartItems.length}`;
+    // Beregn antallet af varer
+    const numberOfItems = cartItems.length;
+
+    // Opdater antallet i alle elementer med klassen "cart-count"
+    const allCartCount = document.querySelectorAll(".cart-count");
+
+    allCartCount.forEach(function (cartUpdate) {
+        cartUpdate.innerHTML = numberOfItems; // Opdaterer innerHTML med antallet af varer
+    });
 });
 
 
